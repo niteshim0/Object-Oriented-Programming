@@ -1,4 +1,4 @@
-# Classes in Object-Oriented Programming
+# Understanding Classes in Object-Oriented Programming
 
 - A class is a blueprint or template for creating objects.
 - It defines the properties (data members) and behaviors (member functions) that objects of that class can have.
@@ -12,10 +12,12 @@ A class in object-oriented programming consists of various types of members that
 1. **Data Members:**
    - Represent the attributes or properties of objects.
    - Can be private, protected, or public.
+   - are variables within a class that represent the state or characteristics of objects.
+   - They encapsulate the data associated with the objects of the class.
 
 2. **Member Functions:**
    - Operate on the data members of the class.
-   - Used to manipulate data and perform specific actions.
+   - Used to manipulate data and perform specific actions associated with the    objects of the class.
 
 3. **Constructor:**
    - Special member function used to initialize the object's state during its creation.
@@ -36,6 +38,5 @@ A class in object-oriented programming consists of various types of members that
 7. **Friend Functions and Classes:**
    - Have access to the private and protected members of a class.
    - Declared using the "friend" keyword.
-
 
 
