@@ -31,3 +31,11 @@ In C++, the default access modifiers for classes are different depending on the 
 It is considered good practice to explicitly define the access modifiers for the members of a class, struct, or union to ensure code clarity and prevent unexpected behavior. Explicitly specifying the access modifiers also makes the code more maintainable and easier to understand for other developers.
 
 
+| Access Specifier | Within class                            | Outside class                  |
+|------------------|-----------------------------------------|--------------------------------|
+| Private          | Accessible                              | Not accessible                 |
+| Protected        | Accessible                              | Not accessible (except in derived classes) |
+| Public           | Accessible                              | Accessible                     |
+
+
+
