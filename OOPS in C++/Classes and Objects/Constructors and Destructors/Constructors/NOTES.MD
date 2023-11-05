@@ -41,6 +41,8 @@ In C++, when creating a copy constructor, a reference variable is often used to 
 
 3. **Consistency**: Passing a reference variable ensures that the original object remains unaltered during the copying process, preserving the integrity of the original data.
 
-
+## Constructor Overloading
+- Constructor overloading in C++ refers to the ability to define multiple constructors within a class, each with a different signature. This allows objects to be initialized in various ways depending on the arguments passed to the constructor.
+- Constructors can be overloaded based on the number and types of parameters they accept.
 
 
