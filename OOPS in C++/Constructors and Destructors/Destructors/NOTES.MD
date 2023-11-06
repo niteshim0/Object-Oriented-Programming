@@ -4,7 +4,7 @@
 - The syntax for a destructor is the same as that of a constructor, but it is preceded by a tilde (~).
 - It can never be static same as constructors.
 - It has no return type.
-- It takes no argument so no any destructor overloading is possible.
+- It takes no argument so no any destructor overloading is not possible.
 - It is invoked implicitly when object is going to destroy.
 - A class can have only one destructor, and it cannot have parameters or return types.
 
