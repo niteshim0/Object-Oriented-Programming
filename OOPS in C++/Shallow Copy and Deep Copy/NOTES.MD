@@ -1,4 +1,4 @@
-## Need of Copying Objects in C++
+# Need of Copying Objects in C++
 
 1. **Preventing Unitended Side Effects**: Copying objects ensures that changes made to one object do not affect other instances. Without proper copying mechanisms, modifying one object could inadvertently alter the data of another, leading to unintended side effects and unpredictable behavior.
 
@@ -10,7 +10,7 @@
 
 5. **Managing dynamic memory allocation**:When dealing with objects that contain dynamically allocated memory, such as pointers, creating copies helps manage memory effectively. By implementing deep copying mechanisms, you can ensure that each object has its own separate memory space, preventing issues like memory leaks or dangling pointers.
 
-## How to create a Copy of Objects in C++?
+# How to create a Copy of Objects in C++?
 
 Threre are two ways to create copy of Objects in C++:
 
@@ -42,14 +42,14 @@ Threre are two ways to create copy of Objects in C++:
  - You have to implement your own copy constructor and assignment operator to ensure a deep copy.
  - If not implemented created , it leads to problem of dangling pointer.
 
-## Memory Leaks and Dangling Pointer
+# Memory Leaks and Dangling Pointer
 
  1. **Memory Leak**:
   - A memory leak occurs when a program allocates memory from the system (typically using functions like new or malloc) but fails to release or deallocate that memory when it is no longer needed.
   - Memory leaks can accumulate over time, causing the program's memory usage to grow continually. This can lead to performance degradation, increased resource consumption, and eventually, the program may run out of memory and crash.
   - Memory leaks are a common source of software bugs and can be challenging to identify and fix, as they often result from a failure to release memory in specific code paths, such as error conditions or exceptional situations.
 
-2. **Dangling Pointers:
+2. **Dangling Pointers**:
   - A dangling pointer is a pointer that continues to point to a memory location after the memory it references has been deallocated or freed. Accessing a dangling pointer can result in undefined behavior and crashes, as the memory it points to may no longer be valid.
   - Dangling pointers often occur when pointers are used to reference memory that was allocated dynamically but later released using delete, free, or similar functions, making the pointer invalid.
   - Dangling pointers can be challenging to debug because the program may appear to work correctly in some cases but crash unpredictably in others, depending on whether the pointer is used after the memory is freed.
