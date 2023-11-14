@@ -33,7 +33,7 @@ int main() {
 
   - `this` is a keyword.
   - `this` is a local(specific to blocks) object pointer in every instance member function containing address of the caller object.
-  - `this` pointer cannot can't be modified.
+  - `this` pointer  can't be modified.
   - It is used to refer caller object in member function.
 
 
