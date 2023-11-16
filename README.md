@@ -24,4 +24,6 @@ For additional resources and in-depth explanations of Object-Oriented Programmin
 - [Object-Oriented Programming Concepts](https://www.geeksforgeeks.org/object-oriented-programming-oop-concept-in-c/)
 - [Introduction to OOP](https://www.tutorialspoint.com/object_oriented_analysis_design/index.htm)
 - [OOP Principles and Best Practices](https://stackify.com/principles-of-object-oriented-programming/)
-- [Classes] (https://cplusplus.com/doc/tutorial/classes/)
+- [Cplusplus.com] (https://cplusplus.com/doc/tutorial/)
+- [C++Reference] (https://en.cppreference.com/w/cpp)
+- [Saurabh Shukla on Youtube](https://www.youtube.com/@cbysaurabhshuklasir32)
