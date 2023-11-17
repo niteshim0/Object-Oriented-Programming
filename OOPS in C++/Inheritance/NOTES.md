@@ -74,4 +74,37 @@ public:
 
 ```
 
+# Visbibility Mode and Concept of Availability and Accessibility in Inheritance
+
+- C++ provides access specifiers such as `public`, `private`, and `protected` to control the visibility of class members.
+     - `public`: Members are accessible from outside the class.
+     - `private`: Members are only accessible within the class.
+     - `protected`: Similar to private but allows access to derived classes.
+
+- Types of Users of a Class
+     - `user1` will create objects of your class.
+     - `user2` will create derived class of your class.
+
+-  Availabilty and Accessibility
+
+  - When we create an object of a class, it occupies space in memory. While we can't directly access private or protected members from that object, it's important to note that these members still consume memory. In other words, when objects of a class are instantiated, the members are available in memory, even though they are not accessible from outside the class.
+  
+  - It's clear that when creating a derived class, we must specify the visibility mode from which we are deriving from the base class, whether it is `public`, `protected`, or `private`. If no such mention is made, the default visibility mode is set to `private`.
+
+  ## Visibility Modes in Derived Class
+
+Let's explore the impact on data members and methods of the base class when deriving a class with respect to different visibility modes:
+
+- **`private`**: This sets the protected and public members of the base class to `private` in the derived class.
+
+- **`protected`**: It sets the protected and public members of the base class to `protected` in the derived class.
+
+- **`public`**: No changes occur; `protected` remains `protected` in the derived class, and `public` remains `public` in the derived class.
+
+We haven't discussed the fate of `private` members of the base class because no one has the authority to alter their visibility; they will always remain `private` everywhere.
+
+- For understanding its thoroughly one must try different sets of permutations and combination of these diffrent visibilty modes through codes.
+
+![Visibilty Modes](image.png)
+
 
