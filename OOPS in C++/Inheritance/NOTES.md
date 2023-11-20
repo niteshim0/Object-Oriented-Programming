@@ -362,6 +362,63 @@ int main() {
 }
 ```
 
+# Destructor in Inheritance
+
+In C++, a destructor is a special member function that is invoked implicitly when an object goes out of scope or is explicitly deleted. In the context of inheritance, when a derived class is involved, destructors play a crucial role in properly releasing resources and cleaning up memory.
+
+## Destructor Call Sequence:
+
+1. **Derived Class Destructor:**
+   - When an object of the derived class goes out of scope or is explicitly deleted, the destructor of the derived class is invoked first.
+   
+2. **Base Class Destructor:**
+   - After the derived class destructor completes its execution, the destructor of the base class is invoked.
+   - It is actually called insides the body od the Derived class Destructor as last step.
+   - Calling as well as Execution order in Destructor is from Derived class to Parent Class.
+   
+   This sequence ensures that both the derived and base class parts of the object are properly cleaned up.
+
+## Example:
+
+Consider the following example:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// Base class
+class Base {
+public:
+    Base() {
+        cout << "Base class constructor." <<endl;
+    }
+
+    ~Base() {
+        cout << "Base class destructor." << endl;
+    }
+};
+
+// Derived class
+class Derived : public Base {
+public:
+    Derived() {
+        cout << "Derived class constructor." <<endl;
+    }
+
+    ~Derived() {
+        cout << "Derived class destructor." <<endl;
+    }
+};
+
+int main() {
+    // Creating an object of the derived class
+    Derived derivedObj;
+
+    // Output will show the sequence of constructor and destructor calls
+
+    return 0;
+}
+```
+
 
 
 
