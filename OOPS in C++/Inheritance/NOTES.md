@@ -326,11 +326,11 @@ int main() {
 }
 ```
 
-### Implications of Parametrized Constructor in Base Class
+## Implications of Parametrized Constructor in Base Class
 
 In C++, when a base class has a parameterized constructor, and you derive a class from it, you must explicitly call the parameterized constructor of the base class from the derived class. This is because the compiler doesn't automatically generate a default constructor when a parameterized constructor is defined in the base class.
 
-## Example:
+### Example:
 
 Consider the following example:
 
@@ -360,6 +360,7 @@ int main() {
 
     return 0;
 }
+```
 
 
 
