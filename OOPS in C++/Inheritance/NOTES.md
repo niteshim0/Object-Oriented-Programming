@@ -87,9 +87,12 @@ public:
 
 -  Availabilty and Accessibility
 
-  - When we create an object of a class, it occupies space in memory. While we can't directly access private or protected members from that object, it's important to note that these members still consume memory. In other words, when objects of a class are instantiated, the members are available in memory, even though they are not accessible from outside the class.
+     - When we create an object of a class, it occupies space in memory. While we can't directly access private or protected members from that object, it's important to 
+       note that these members still consume memory. In other words, when objects of a class are instantiated, the members are available in memory, even though they are 
+       not accessible from outside the class.
   
-  - It's clear that when creating a derived class, we must specify the visibility mode from which we are deriving from the base class, whether it is `public`, `protected`, or `private`. If no such mention is made, the default visibility mode is set to `private`.
+     - It's clear that when creating a derived class, we must specify the visibility mode from which we are deriving from the base class, whether it is `public`, 
+       `protected`, or `private`. If no such mention is made, the default visibility mode is set to `private`.
 
   ## Visibility Modes in Derived Class
 
@@ -323,11 +326,11 @@ int main() {
 }
 ```
 
-### Implications of Parametrized Constructor in Base Class
+## Implications of Parametrized Constructor in Base Class
 
 In C++, when a base class has a parameterized constructor, and you derive a class from it, you must explicitly call the parameterized constructor of the base class from the derived class. This is because the compiler doesn't automatically generate a default constructor when a parameterized constructor is defined in the base class.
 
-## Example:
+### Example:
 
 Consider the following example:
 
@@ -358,6 +361,7 @@ int main() {
     return 0;
 }
 ```
+
 # Destructor in Inheritance
 
 In C++, a destructor is a special member function that is invoked implicitly when an object goes out of scope or is explicitly deleted. In the context of inheritance, when a derived class is involved, destructors play a crucial role in properly releasing resources and cleaning up memory.
