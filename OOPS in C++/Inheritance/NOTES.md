@@ -275,3 +275,89 @@ class FinalDerived : public Derived1, public Derived2 {
 
 };
 ```
+
+# Constructor in Inheritance
+
+In C++, a constructor is a special member function that is invoked implicitly when an object is created. In the context of inheritance, when we create objects of a derived class, the following events take place:
+
+1. **Memory Allocation:**
+   - When an object of the derived class is created, memory is allocated for all the members of both the derived class and its base class(es).
+
+2. **Base Class Constructor Invocation:**
+   - The constructor of the base class is invoked first, initializing the base class members. This ensures that the base class part of the derived class object is properly initialized.
+
+3. **Derived Class Constructor Invocation:**
+   - After the base class constructor completes its execution, the constructor of the derived class is invoked. This initializes the derived class members.
+   - Actually ,it is derived class constructor which calls the base class constructor.
+   - Syntax for it : Derived() : Base() whether the coder write ohterwise it will be written implicitly by compiler.
+   - We can say that calling order of Constructor is from Derived class to Base class whereas Execution is from Parent Class to Child Class.
+
+## Example:
+
+Consider the following example:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// Base class
+class Base {
+public:
+    Base() {
+        cout << "Base class constructor." << endl;
+    }
+};
+
+// Derived class
+class Derived : public Base {
+public:
+    Derived() {
+        cout << "Derived class constructor." << endl;
+    }
+};
+
+int main() {
+    // Creating an object of the derived class
+    Derived derivedObj;
+
+    return 0;
+}
+```
+
+### Implications of Parametrized Constructor in Base Class
+
+In C++, when a base class has a parameterized constructor, and you derive a class from it, you must explicitly call the parameterized constructor of the base class from the derived class. This is because the compiler doesn't automatically generate a default constructor when a parameterized constructor is defined in the base class.
+
+## Example:
+
+Consider the following example:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// Base class with a parameterized constructor
+class Base {
+public:
+    Base(int value) {
+        cout << "Base class parameterized constructor with value: " << value << endl;
+    }
+};
+
+// Derived class
+class Derived : public Base {
+public:
+    // Derived class constructor must explicitly call the Base class parameterized constructor
+    Derived(int valueDerived, int valueBase) : Base(valueBase) {
+        cout << "Derived class constructor with values: " << valueDerived << ", " << valueBase <<endl;
+    }
+};
+
+int main() {
+    // Creating an object of the derived class, calling both the base and derived class constructors
+    Derived derivedObj(42, 21);
+
+    return 0;
+}
+
+
+
+
