@@ -107,4 +107,70 @@ We haven't discussed the fate of `private` members of the base class because no 
 
 ![Visibilty Modes](image.png)
 
+# RelationShip between  Classes(Entitites)
+
+## Entities and Classes
+
+In C++, entities are represented using classes. A class is a blueprint for creating objects, encapsulating data, and defining behavior.
+
+## Association
+
+Association represents the relationship between entities. There are various ways to establish associations between classes:
+
+### 1. Aggregation
+
+Aggregation represents a "has-a" relationship where one class contains another class as a part. It implies a weaker relationship, and the objects can exist independently.
+
+Example:
+
+```cpp
+class Department {
+    // ...
+};
+
+class University {
+    std::vector<Department> departments;
+    // ...
+};
+```
+### 2. Composition
+
+Composition is a stronger form of aggregation, where one class contains another class, and the contained class has a significant relationship with the container. If the container is destroyed, the contained class is also destroyed.
+
+Example:
+
+```cpp
+class Engine {
+    // ...
+};
+
+class Car {
+    Engine carEngine;
+    // ...
+};
+```
+### 3. Inheritance
+
+- Inheritance establishes an "is-a" relationship between classes. It allows a class to inherit properties and behaviors from another class, forming a hierarchy.e.g., Banana is a Fruit . Generalized class(Fruit) is Base Class and Specific Class(Banana) is Derived Class.
+- The "is-a" relationship implies that an object of the derived class is also an object of the base class.
+- "Is-a" relationship is always implemented as a public inheritance.(Explained in Code).
+
+Example:
+
+```cpp
+class Animal {
+public:
+    void eat() {
+        // ...
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        // ...
+    }
+```
+
+
 
