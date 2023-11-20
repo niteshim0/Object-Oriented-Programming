@@ -171,6 +171,107 @@ public:
         // ...
     }
 ```
+# Types of Inheritance in C++
 
+In C++, inheritance allows a class to inherit properties and behaviors from another class. There are several types of inheritance:
 
+## 1. Single Inheritance
 
+In single inheritance, a derived class is derived from only one base class.
+
+Example:
+
+```cpp
+class Base {
+    // ...
+};
+
+class Derived : public Base {
+    // ...
+};
+```
+## 2. Multiple Inheritance
+
+In multiple inheritance, a derived class is derived from more than one base class.
+
+Example:
+
+```cpp
+class Base1 {
+    // ...
+};
+
+class Base2 {
+    // ...
+};
+
+class Derived : public Base1, public Base2 {
+    // ...
+};
+```
+## 3. Multilevel Inheritance
+
+In multilevel inheritance, a class is derived from another derived class.
+A tranistive relationship exist b/w base class and derived class.
+
+Example:
+
+```cpp
+class Base {
+    // ...
+};
+
+class Intermediate : public Base {
+    // ...
+};
+
+class Derived : public Intermediate {
+    // ...
+};
+```
+
+## 4. Hierarchical Inheritance
+
+In hierarchical inheritance, multiple classes are derived from a single base class.
+In maximum scenarion, it will be possible.Its the most common inheritance you will see
+in your code as well as real life.
+
+Example:
+
+```cpp
+class Base {
+    // ...
+};
+
+class Derived1 : public Base {
+    // ...
+};
+
+class Derived2 : public Base {
+    // ...
+};
+```
+## 5. Hybrid Inheritance
+
+Hybrid inheritance is a combination of two or more types of inheritance.
+
+Example:
+
+```cpp
+class Base {
+    // ...
+};
+
+class Derived1 : public Base {
+    // ...
+};
+
+class Derived2 : public Base {
+    // ...
+};
+
+class FinalDerived : public Derived1, public Derived2 {
+    // ...
+
+};
+```
