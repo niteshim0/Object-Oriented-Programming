@@ -20,7 +20,7 @@ class B{
   friend void sum(A,B);
 };
 void sum(A obj1,B obj2){
-  cout<<"Sum of private members of differnt types of classes  "<<obj1.a+obj2.b<<endl;
+  cout<<"Sum of private members of Class A and Class B,yes that's can be done using friend function  "<<obj1.a+obj2.b<<endl;
 }
 int main(){
    A obj1;

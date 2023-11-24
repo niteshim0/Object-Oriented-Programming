@@ -64,7 +64,7 @@ When resolving overloaded functions in C++, the compiler follows certain rules t
    - In C++, any primitive type can be converted to other types by automatic type conversion if thats possible. Overloaded functions can also be bound based on type conversion.
    - However, conflicts may arise if one primitive type can be converted to two different types, and overloaded functions exist for both of those target types.
    - For example, if we pass a `char` type argument and have two overloaded functions – one taking an argument of type `float` and the other of type `double` – it can lead to ambiguity.
-     - To resolve this ambiguity, make sure there is a clear and unique conversion path for the given argument.
+   - To resolve this ambiguity, make sure there is a clear and unique conversion path for the given argument.
 
 These rules guide the compiler in selecting the appropriate overloaded function to bind based on the provided arguments. Understanding these rules is crucial for avoiding ambiguity and ensuring the correct function is called during compilation.
 
