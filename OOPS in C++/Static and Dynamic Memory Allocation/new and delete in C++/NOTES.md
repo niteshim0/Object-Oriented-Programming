@@ -1,13 +1,13 @@
-# `new` and `delete` Keywords
+## `new` and `delete` Keywords
 
 In C++, `new` and `delete` are operators used for dynamic memory allocation and deallocation, respectively. They allow you to allocate memory on the heap during program execution.
 
-## `new` Operator
+### `new` Operator
 
 - The `new` operator is used to allocate memory for a single variable or an array on the heap.
 - It returns a pointer to the allocated memory.
 
-### Syntax:
+#### Syntax:
  - For a single variable
 ```cpp
 pointer_variable = new data_type;
@@ -21,7 +21,7 @@ e.g,
 double* doubleArray = new double[10];  // Allocates memory for an array of 10 doubles
 ```
 
-## `delete` Operator
+### `delete` Operator
 
 The `delete` operator is used to deallocate memory that was previously allocated with `new`. It is an essential part of managing dynamic memory in C++.
 
@@ -29,7 +29,7 @@ The `delete` operator is used to deallocate memory that was previously allocated
 
 - Statically allocated variable has only certain scope so after scope they eventually get deleted.
 
-### Syntax :
+#### Syntax :
 
 - For single variables:
   ```cpp
@@ -45,7 +45,7 @@ The `delete` operator is used to deallocate memory that was previously allocated
  delete[] doubleArray;     // Deallocates memory for the array of double
 
 ```
-## ExampleProgram
+### ExampleProgram
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -84,7 +84,7 @@ int main() {
     return 0;
 }
 ```
-# Memory Management in C++
+## Memory Management in C++
 
 - **Unlike Java,** C++ does not have a built-in Garbage Collection mechanism.
 
