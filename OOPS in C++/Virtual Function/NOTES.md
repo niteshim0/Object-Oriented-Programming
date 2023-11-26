@@ -1,4 +1,4 @@
-# What Problem does Virtual Function does solve?
+# What problem does a Virtual Function solve?
 
 ## A Interesting Feature of Base Class Pointer
 
