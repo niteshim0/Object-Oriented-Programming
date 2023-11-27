@@ -49,3 +49,5 @@ int main() {
   - The ideal behavior would be late binding, where the compiler should call functions according to their contents, not their type. This is where the concept of virtual functions comes in to save the day.
   - If we declare the `fun()` function of the base class as virtual, it will lead to late binding, addressing the issue.
   - When we declare one type of function as virtual, its overridden version will also be virtual even though it is not explicitly mentioned.
+
+
