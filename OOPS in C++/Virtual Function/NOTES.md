@@ -1,4 +1,4 @@
-# What Problem does Virtual Function does solve?
+# What problem does a Virtual Function solve?
 
 ## A Interesting Feature of Base Class Pointer
 
@@ -51,7 +51,8 @@ int main() {
   - When we declare one type of function as virtual, its overridden version will also be virtual even though it is not explicitly mentioned.
 
 
-## What problem does a virtual function solve?
+
+## So,these are the problem a virtual function solve?
 
 In C++, a virtual function addresses the problem of achieving runtime polymorphism. Polymorphism allows objects of different types to be treated as objects of a common base type. However, without virtual functions, the compiler performs early binding, meaning it resolves the function calls at compile-time based on the type of the pointer or reference.
 
