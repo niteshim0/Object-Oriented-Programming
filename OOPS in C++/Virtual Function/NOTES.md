@@ -51,6 +51,7 @@ int main() {
   - When we declare one type of function as virtual, its overridden version will also be virtual even though it is not explicitly mentioned.
 
 
+
 ## So,these are the problem a virtual function solve?
 
 In C++, a virtual function addresses the problem of achieving runtime polymorphism. Polymorphism allows objects of different types to be treated as objects of a common base type. However, without virtual functions, the compiler performs early binding, meaning it resolves the function calls at compile-time based on the type of the pointer or reference.
@@ -58,4 +59,5 @@ In C++, a virtual function addresses the problem of achieving runtime polymorphi
 The issue arises when dealing with base class pointers or references pointing to objects of derived classes. Without virtual functions, these pointers or references would invoke the base class's methods, not the overridden methods in the derived class.
 
 By using the `virtual` keyword in the base class function declaration, you enable late binding, or dynamic dispatch, which means the correct function is determined at runtime based on the actual type of the object being pointed to or referred to. This facilitates the implementation of polymorphism, allowing derived classes to provide their own specific implementations of base class functions and ensuring that the correct function is called, even when accessed through base class pointers or references.
+
 
