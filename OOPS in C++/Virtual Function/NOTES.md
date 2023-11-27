@@ -73,8 +73,6 @@ In C++, the concepts of vptr (virtual pointer) and vtable (virtual function tabl
 - The vtable is a table of function pointers. It consists of addresses of the virtual functions for that class.
 - The vtable is created by the compiler during the compilation process.It is static array.
 
-![vtable](https://i.imgur.com/hX7cSS7.png)
-
 ## Virtual Pointer (vptr)
 
 - An object of a class with virtual functions often contains a hidden data member called the **virtual pointer (`vptr`)**.
@@ -89,7 +87,6 @@ In C++, the concepts of vptr (virtual pointer) and vtable (virtual function tabl
 - If an object is created for any instance of a class, whether derived or base, an associated `vptr` is also created if its base class or the class itself contains the virtual function. This `vptr` points to the `vtable`.
 - If a derived class has an overridden version of the virtual function, then the `vtable` will contain the address of the overridden version of the function. If the derived class doesn't have its own overridden version of the virtual function, it inherits the virtual function from the base class. In this case, the `vtable` of the derived class also points to the virtual function of the base class if it's not overridden.
 
-![vptr in Derived Classes](https://i.imgur.com/AbxD2Wp.png)
 
 
 ## How It Works
@@ -124,19 +121,14 @@ int main() {
     return 0;
 }
 ```
-## Image Illustration to show the same
-
- # Pointer and Object of Same Type
-![Pointer and Object of Same Type]
-(C:\Users\hp\Desktop\Object-Oriented-Programming\OOPS in C++\Virtual Function\Pointer and Object of the Same Type.png)
- # Pointer and Object of Different Type
-![Pointer and Object of Different Type](C:\Users\hp\Desktop\Object-Oriented-Programming\OOPS in C++\Virtual Function\Pointer and Object of Different Type.png)
-
 
 ### References
 
-If you ever feel doubt in any concept if you are Hindi Speaker,you can always rely on Saurabh Shukla Sir
-[Virtual Function Working Concept by Saurabh Shukla](https://www.youtube.com/watch?v=Z_FiER8aAqM&t=12s)
+If you ever feel doubt in any concept in C++, if you are Hindi Speaker,you can always rely on Saurabh Shukla Sir
+
+- [Virtual Function Working Concept by Saurabh Shukla](https://www.youtube.com/watch?v=Z_FiER8aAqM&t=12s)
+
+Image Illustrations are there in this folder look at it for better understanding.
 
 
 
