@@ -19,19 +19,13 @@ virtual void doNothingFunction() = 0;
 
 ## What's to know about doNothingFunction or Pure Virtual Function ?
 
-If we make a object of class and call this function through that then it will be wrong since it has nothing to execute then it must be not allowed to call it by any means.
+If an object of the Person class were allowed to be instantiated, calling the doNothing() function through that object would be erroneous. Since the Person class itself doesn't define any specific behavior for this function, attempting to execute it would be meaningless. To prevent such scenarios and to ensure that the function is only invoked when meaningful implementations are provided in the derived classes, it is imperative to disallow the instantiation of the Person class altogether.
 
-So due to this reason,C++ bans the instaniation of those classes which contains the pure virtual function(do nothing function).
+However, it's important to note that even though the Person class, with its pure virtual function doNothing(), cannot be instantiated, a child class derived from it can be. This is by design, as the child class is expected to provide concrete implementations for the pure virtual functions declared in the base class. The ban on instantiation applies to the abstract base class (Person), ensuring that any class inheriting from it must override the pure virtual functions. Therefore, while the child class can be instantiated, it must first provide meaningful implementations for the abstract functions to be utilized correctly.
 
-But if we make the child class of this class,then by through which we may call the pure virtual function as their is no any ban on instantiation of child class.
-
-So,C++ comes with one more rule,if a Child class is derived from the class containing the pure virtual function then it is must to override the virtual function in Child class which contains the body otherwise this chain continues.
-
-But as we have seen in Virtual Function module,that if we make pointer of type Base Class and it points to the object of Child Class then due to early binding the pointer points to the function of Base Class,in this way one can access doNothing function that's why it is compulsory to also use `virtual` alongwith doNothing funcion ,thus facilitating late binding.
+As discussed in the Virtual Function module, when a pointer of the type base class is used to point to an object of the child class, early binding can lead to unexpected behavior. This is because the pointer will invoke the function of the base class. To ensure that the overridden function in the child class is correctly called, the virtual keyword must be used. This facilitates late binding, allowing the correct function to be resolved at runtime based on the actual type of the object being pointed to. Therefore, it's essential to use the virtual keyword with functions that are intended to be overridden in derived classes to ensure proper polymorphic behavior.
 
 Now , we will introduce to our concept `Abstract Class`.
-
-
 
 ## Abstract Class
 
@@ -91,9 +85,9 @@ Another crucial consideration is that there are certain aspects common to both `
 
 ## So these are key takeaways from this example:-
 
-1. **Reducing Redundancy**:Abstract classes help in reducing redundancy by providing a common interface for classes that share common methods. In our example, both `Student` and Faculty can inherit common methods from the abstract Person class, avoiding the need to duplicate code.
+1. **Reducing Redundancy**:Abstract classes help in reducing redundancy by providing a common interface for classes that share common methods. In our example, both `Student` and `Faculty` can inherit common methods from the abstract Person class, avoiding the need to duplicate code.
 
-2. **Generalization and Inheritance**:By having a common base class (Person), you can represent a more general concept that can be inherited by more specific classes (`Student` and `Faculty`). This reflects the concept of generalization in object-oriented programming.
+2. **Generalization and Inheritance**:By having a common base class (Person), you can represent a more general concept that can be inherited by more specific classes (`Student` and ``Faculty``). This reflects the concept of generalization in object-oriented programming.
 
 3. **Preventing Instantiation of Ambiguous Concepts**:Making `Person` an abstract class prevents the instantiation of objects directly from the `Person` class. This is crucial in scenarios where the concept represented by the base class doesn't have a clear identity or could be ambiguous in the context of the application.
 
