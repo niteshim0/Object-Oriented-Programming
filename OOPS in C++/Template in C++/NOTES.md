@@ -58,7 +58,7 @@ int main(){
 - In C++, a class template is a way to define a generic class that can work with different data types. 
 - It allows you to write a class once and use it with various data types without having to rewrite the code for each specific type. 
 - Class templates are often used to create containers like vectors, lists, and other generic data structures.
-- When you use a class template, you provide the actual data type you want to use as an argument inside angle brackets (<>). This is called template specialization. The C++ compiler then generates a specific version of the class for that data type.
+- When you use a class template, you provide the actual data type you want to use as an argument inside angle brackets (`<>`). This is called `template specialization`. The C++ compiler then generates a specific version of the class for that data type.
 - Class templates are widely used in C++ to create generic classes and functions that work with various data types. They provide a powerful tool for creating flexible and reusable code.
 
 ### Class template definition
