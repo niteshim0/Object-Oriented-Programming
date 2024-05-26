@@ -23,7 +23,7 @@ In C++, memory is categorized into two main types: stack memory and heap memory:
    - Suitable for storing data structures or objects with a longer lifetime and dynamic memory allocation requirements.
    - Improper management can lead to memory leaks or fragmentation issues.
    - One can directly access variables inside heap since they return address not value.
-   - Variables are created using `new` keyword in heap memory. e.g, char *ch = new cha;
+   - Variables are created using `new` keyword in heap memory. e.g, char *ch = new char;
 
 3. **Usage:**
    - Suitable for dynamically allocated data structures, objects with a longer lifetime, or when memory requirements are unknown at compile time.
