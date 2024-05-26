@@ -15,7 +15,7 @@ class SportsCar : public Car{
   //for making available public services of parent class in child class
   //public inheritance is needed
 };
-//whent to do private or protected inheritance?
+//when to do private or protected inheritance?
 class Array{
   private:
     int a[10];
