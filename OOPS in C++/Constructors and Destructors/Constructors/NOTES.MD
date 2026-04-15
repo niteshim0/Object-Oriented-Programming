@@ -21,6 +21,67 @@ A constructor in C++ is:
          - Initializes members with default values:
             - **Built-in types (int, float)** → garbage values ❗
             - **Class types (string, vector)** → their own default constructors run.
+         - Ensures object can still be created without arguments.
+         - Gives a valid initial state (even if not meaningful).
+         - Required for:
+            - Arrays of objects.
+            - STL containers (like vector<Person>).
+
+   - **Q. Show me a real bug scenario where missing default constructor breaks STL/vector ? **
+      
+      ```c++
+         #include<bits/stdc++.h>
+         using namespace std;
+
+         class Person{
+            
+            public :
+              string name;
+              string age;
+            
+            // Only Parametrized Constructor
+            Person(string n , string a){
+               name = n;
+               age  = a;
+            }
+         };
+
+         int main(){
+
+            vector<Person> v(3) ; ❌ ERROR
+            
+            return 0;
+         }
+
+
+         /* 💥 Why it fails:
+            vector<Person> v(3);
+            This tries to create 3 Objects internally like
+            1. Person()  , 2. Person() , 3. Person()
+
+            ❗ But:
+
+           You did NOT define default constructor
+           Compiler won’t generate one (because you already defined a constructor)
+
+           ➡️ So → Compilation Error
+            
+            ✅ Fix 1: Add Default Constructor
+
+            Person() {
+               name = "Unknown";
+               age = 0;
+            }
+
+            ✅ Fix 2: Use push_back / emplace_back
+
+               vector<Person> v;
+
+               v.emplace_back(Person("A", 20));
+               v.emplace_back(Person("B", 25));
+
+           */
+      ```
 
  2. **Parametrized Constructor:**
     - A type of constructor that accepts parameters during object creation. 
