@@ -2,20 +2,73 @@
 #include <string>
 using namespace std;
 
-//Example of Member Function and Data Members
+// Example of Member Functions and Data Members
 class Person {
 private:
     string name;
     int age;
 
 public:
-    // Member function to set the name
+    // Member function to set the name (defined inside the class)
     void setName(string n) {
         name = n;
     }
 
-    // Member function to set the age
+    // Declaration of member function (will be defined outside the class)
     void setAge(int);
+
+    // Member function to display information (defined inside the class)
+    void displayInfo() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+// Member function defined outside the class using scope resolution operator (::)
+// If a member function is defined outside the class, its declaration must be inside the class.
+// Otherwise, a compiler error occurs because the compiler won't recognize the function as a class member.
+void Person::setAge(int a) {
+    age = a;
+}
+
+int main() {
+    // Creating an object of class Person
+    Person person1;
+
+    // Setting values using member functions
+    person1.setName("John Doe");
+    person1.setAge(30);
+
+    // Displaying the values
+    person1.displayInfo();
+
+    return 0;
+}
+
+// Constructor Version
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Example of Constructor with Data Members
+class Person {
+private:
+    string name;
+    int age;
+
+public:
+    // Default Constructor
+    Person() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Parameterized Constructor
+    Person(string n, int a) {
+        name = n;
+        age = a;
+    }
 
     // Member function to display information
     void displayInfo() {
@@ -24,22 +77,16 @@ public:
     }
 };
 
-//Outside Member function can be defined using scope(::) operator
-//But Function Definition should be inside the class
-void Person::setAge(int a){
-  age = a;
-}
-
 int main() {
-    // Creating an object of the class Person
-    Person person1;
+    // Using default constructor
+    Person p1;
+    p1.displayInfo();
 
-    // Using member functions to set data members
-    person1.setName("John Doe");
-    person1.setAge(30);
+    cout << endl;
 
-    // Using member function to display information
-    person1.displayInfo();
+    // Using parameterized constructor
+    Person p2("John Doe", 30);
+    p2.displayInfo();
 
     return 0;
 }
