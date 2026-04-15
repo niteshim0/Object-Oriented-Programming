@@ -16,11 +16,12 @@ A constructor in C++ is:
     - If no constructor is defined by the programmer, the compiler provides a default constructor it can be so also called as implicit default constructor.
     - Thumb Rule :: If an object is created, a constructor must be called.
     - **✅ Why default constructor gets called (even if you don’t write it)?**
-           - 🔍 What it does:
-           - Allocates memory for the object.
-           - Initializes members with default values:
-                 - Built-in types (int, float) → garbage values ❗
-                 - Class types (string, vector) → their own default constructors run.
+         - 🔍 What it does:
+         - Allocates memory for the object.
+         - Initializes members with default values:
+            - **Built-in types (int, float)** → garbage values ❗
+            - **Class types (string, vector)** → their own default constructors run.
+
  2. **Parametrized Constructor:**
     - A type of constructor that accepts parameters during object creation. 
     - It allows you to initialize the object with specific values provided as arguments to the constructor. 
